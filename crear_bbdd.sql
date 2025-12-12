@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS awpo CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE awpo;
+CREATE DATABASE IF NOT EXISTS greenride CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE greenride;
 
 CREATE TABLE concesionarios (
   id_concesionario INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -58,4 +58,5 @@ CREATE TABLE reservas (
     REFERENCES vehiculos(id_vehiculo)
     ON DELETE RESTRICT
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 
