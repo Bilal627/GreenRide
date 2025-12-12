@@ -1,0 +1,117 @@
+<%- include('partials/header', {titulo: 'GreenRide - Mis Reservas' , pagina: 'mis_reservas' }) %>
+
+    <main class="container">
+        <div class="catalogo">
+            <h2 class="text-light mb-4 text-center">Reservas</h2>
+            <div class="row g-4">
+                <% if (resultados && resultados.length> 0) { %>
+                    <% resultados.forEach((r)=> { %>
+                        <div class="col 12 col-md-6 col-lg-4">
+                            <div class="tarjeta-vehiculo h-100 p-4 position-relative">
+                                <div class="bagde-estado bg-success text-white">
+                                    <%= r.estado_reserva %>
+                                </div>
+                                <div class="card-body p-0 mt-3 text-center">
+                                    <h3 class="card-title fw-bold mb-1">
+                                        <%= r.marca %>
+                                            <%= r.modelo %>
+                                    </h3>
+                                    <p class="parrafo-reservas text-white-50 mb-3">
+                                        Matrícula: <span class="text-white">
+                                            <%= r.matricula %>
+                                        </span><br>
+                                        ID usuario: <span class="text-white">
+                                            <%= r.id_usuario %>
+                                        </span>
+                                    </p>
+
+                                    <hr>
+                                    <div class="d-flex justify-content-between text-white">
+                                        <%const formatoHora={hour: '2-digit' , minute: '2-digit' };%>
+                                            <div class="text-start">
+                                                <small class="text-white-50 d-block">Desde</small>
+                                                <span class="fw-bold">
+                                                    <%= new Date(r.fecha_inicio).toLocaleDateString() %> (<%= new
+                                                            Date(r.fecha_inicio).toLocaleTimeString([], formatoHora) %>)
+                                                </span>
+                                            </div>
+                                            <div class="text-start">
+                                                <small class="text-white-50 d-block">Hasta</small>
+                                                <span class="fw-bold">
+                                                    <%= new Date(r.fecha_fin).toLocaleDateString() %> (<%= new
+                                                            Date(r.fecha_inicio).toLocaleTimeString([], formatoHora) %>)
+                                                </span>
+                                            </div>
+                                    </div>
+
+                                    <br>
+                                    <button type="button" class="btn btn-outline-primary text-light"
+                                        data-bs-toggle="modal" data-bs-target="#modalIncidencia-<%= r.id_reserva %>">
+                                        Incidencias/Km recorrido
+                                    </button>
+                                    <br>
+                                    <br>
+                                    <button type="button" class="btn btn-outline-primary text-light terminar_reserva"
+                                        data-id-reserva="<%= r.id_reserva %>" <%=r.estado_reserva==='activa' ? ''
+                                        : 'disabled' %>>
+                                        Finalizar/Cancelar Reserva
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <div class="modal fade" id="modalIncidencia-<%= r.id_reserva %>" tabindex="-1"
+                            aria-labelledby="modalLabel-<%= r.id_reserva %>" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalLabel">ID Reserva: <%= r.id_reserva %>
+                                        </h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Cerrar"></button>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <div class="mb-3">
+                                            <label class="form-label">Incidencia</label>
+                                            <textarea class="form-control" data-id-reserva="<%= r.id_reserva %>"
+                                                name="incidencia"
+                                                rows="4"> <%= r.incidencias_reportadas || '' %></textarea>
+                                            <div class="invalid-feedback">Introduzca lo que ha sucedido</div>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="form-label">Km Recorrido</label>
+                                            <input type="number" class="form-control"
+                                                data-id-reserva="<%= r.id_reserva %>"
+                                                value="<%=r.kilometros_recorridos %>" name="km_recorrido"
+                                                placeholder="0">
+                                            <div class="invalid-feedback">Introduzca km recorridos</div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" data-id-reserva="<%= r.id_reserva %>"
+                                            class="btn btn-primary guardar_incidencia ">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <% }) %>
+                            <% } else { %>
+                                <div class="col-12">
+                                    <div class="cuadrado text-center">
+                                        <p>No tienes reservas en el sistema</p>
+                                        <a href="/vehiculos" class="btn btn-primary mt-3">Ver vehiculos disponibles</a>
+                                    </div>
+                                </div>
+                                <% } %>
+            </div>
+        </div>
+    </main>
+
+    <%- include('partials/footer', {pagina: 'mis_reservas' }) %>

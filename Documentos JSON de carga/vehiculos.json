@@ -1,0 +1,47 @@
+{
+  "vehiculos": [
+    { "matricula": "NUEVO-001", "marca": "Tesla", "modelo": "Model 3", "ano_matriculacion": 2023, "numero_plazas": 5, "autonomia_km": 491, "color": "Negro", "imagen": "tesla1.png", "estado": "disponible", "nombre_concesionario": "Concesionario 1" },
+    { "matricula": "NUEVO-002", "marca": "BYD", "modelo": "Seal", "ano_matriculacion": 2024, "numero_plazas": 5, "autonomia_km": 570, "color": "Blanco", "imagen": "byd_seal3.png", "estado": "disponible", "nombre_concesionario": "Concesionario 1" },
+    { "matricula": "NUEVO-003", "marca": "Volkswagen", "modelo": "ID.4", "ano_matriculacion": 2024, "numero_plazas": 5, "autonomia_km": 520, "color": "Azul Oscuro", "imagen": "VW1.png", "estado": "disponible", "nombre_concesionario": "Concesionario 1" },
+    
+    { "matricula": "NUEVO-004", "marca": "Volvo", "modelo": "EX30", "ano_matriculacion": 2024, "numero_plazas": 5, "autonomia_km": 344, "color": "Gris Niebla", "imagen": "volvo1.png", "estado": "disponible", "nombre_concesionario": "Concesionario 2" },
+    { "matricula": "NUEVO-005", "marca": "Tesla", "modelo": "Model 3", "ano_matriculacion": 2023, "numero_plazas": 5, "autonomia_km": 491, "color": "Azul", "imagen": "tesla5.png", "estado": "disponible", "nombre_concesionario": "Concesionario 2" },
+    { "matricula": "NUEVO-006", "marca": "BYD", "modelo": "Seal", "ano_matriculacion": 2024, "numero_plazas": 5, "autonomia_km": 570, "color": "Azul Oscuro", "imagen": "byd_seal2.png", "estado": "disponible", "nombre_concesionario": "Concesionario 2" },
+
+    { "matricula": "NUEVO-007", "marca": "Volkswagen", "modelo": "ID.4", "ano_matriculacion": 2024, "numero_plazas": 5, "autonomia_km": 520, "color": "Rojo", "imagen": "VW2.png", "estado": "disponible", "nombre_concesionario": "Concesionario 3" },
+    { "matricula": "NUEVO-008", "marca": "Volvo", "modelo": "EX30", "ano_matriculacion": 2024, "numero_plazas": 5, "autonomia_km": 344, "color": "Blanco", "imagen": "volvo2.png", "estado": "disponible", "nombre_concesionario": "Concesionario 3" },
+    { "matricula": "NUEVO-009", "marca": "Volkswagen", "modelo": "ID.7", "ano_matriculacion": 2024, "numero_plazas": 5, "autonomia_km": 600, "color": "Azul Oscuro", "imagen": "VW5.png", "estado": "disponible", "nombre_concesionario": "Concesionario 3" },
+
+    { "matricula": "NUEVO-010", "marca": "Tesla", "modelo": "Model 3", "ano_matriculacion": 2023, "numero_plazas": 5, "autonomia_km": 491, "color": "Blanco", "imagen": "tesla6.png", "estado": "disponible", "nombre_concesionario": "Concesionario 4" },
+    { "matricula": "NUEVO-011", "marca": "BYD", "modelo": "Seal", "ano_matriculacion": 2024, "numero_plazas": 5, "autonomia_km": 570, "color": "Azul Claro", "imagen": "byd_seal1.png", "estado": "disponible", "nombre_concesionario": "Concesionario 4" },
+    { "matricula": "NUEVO-012", "marca": "Tesla", "modelo": "Model 3", "ano_matriculacion": 2023, "numero_plazas": 5, "autonomia_km": 491, "color": "Rojo", "imagen": "tesla2.png", "estado": "disponible", "nombre_concesionario": "Concesionario 4" },
+
+    { "matricula": "NUEVO-013", "marca": "Volkswagen", "modelo": "ID.7", "ano_matriculacion": 2024, "numero_plazas": 5, "autonomia_km": 600, "color": "Rojo", "imagen": "VW4.png", "estado": "disponible", "nombre_concesionario": "Concesionario 5" },
+    { "matricula": "NUEVO-014", "marca": "Volvo", "modelo": "EX30", "ano_matriculacion": 2024, "numero_plazas": 5, "autonomia_km": 344, "color": "Amarillo", "imagen": "volvo3.png", "estado": "disponible", "nombre_concesionario": "Concesionario 5" },
+    { "matricula": "NUEVO-015", "marca": "Tesla", "modelo": "Model 3", "ano_matriculacion": 2023, "numero_plazas": 5, "autonomia_km": 491, "color": "Gris Plata", "imagen": "tesla3.png", "estado": "disponible", "nombre_concesionario": "Concesionario 5" },
+
+    { "matricula": "NUEVO-016", "marca": "Tesla", "modelo": "Model 3", "ano_matriculacion": 2023, "numero_plazas": 5, "autonomia_km": 491, "color": "Gris Oscuro", "imagen": "tesla4.png", "estado": "disponible", "nombre_concesionario": "Concesionario 6" },
+    { "matricula": "NUEVO-017", "marca": "Volkswagen", "modelo": "ID.4", "ano_matriculacion": 2024, "numero_plazas": 5, "autonomia_km": 520, "color": "Azul Claro", "imagen": "VW3.png", "estado": "disponible", "nombre_concesionario": "Concesionario 6" },
+    { "matricula": "NUEVO-018", "marca": "Tesla", "modelo": "Model 3", "ano_matriculacion": 2023, "numero_plazas": 5, "autonomia_km": 491, "color": "Negro", "imagen": "tesla1.png", "estado": "disponible", "nombre_concesionario": "Concesionario 6" },
+
+    { "matricula": "NUEVO-019", "marca": "BYD", "modelo": "Seal", "ano_matriculacion": 2024, "numero_plazas": 5, "autonomia_km": 570, "color": "Blanco", "imagen": "byd_seal3.png", "estado": "disponible", "nombre_concesionario": "Concesionario 7" },
+    { "matricula": "NUEVO-020", "marca": "Volkswagen", "modelo": "ID.4", "ano_matriculacion": 2024, "numero_plazas": 5, "autonomia_km": 520, "color": "Azul Oscuro", "imagen": "VW1.png", "estado": "disponible", "nombre_concesionario": "Concesionario 7" },
+    { "matricula": "NUEVO-021", "marca": "Volvo", "modelo": "EX30", "ano_matriculacion": 2024, "numero_plazas": 5, "autonomia_km": 344, "color": "Gris Niebla", "imagen": "volvo1.png", "estado": "disponible", "nombre_concesionario": "Concesionario 7" },
+
+    { "matricula": "NUEVO-022", "marca": "Tesla", "modelo": "Model 3", "ano_matriculacion": 2023, "numero_plazas": 5, "autonomia_km": 491, "color": "Azul", "imagen": "tesla5.png", "estado": "disponible", "nombre_concesionario": "Concesionario 8" },
+    { "matricula": "NUEVO-023", "marca": "BYD", "modelo": "Seal", "ano_matriculacion": 2024, "numero_plazas": 5, "autonomia_km": 570, "color": "Azul Oscuro", "imagen": "byd_seal2.png", "estado": "disponible", "nombre_concesionario": "Concesionario 8" },
+    { "matricula": "NUEVO-024", "marca": "Volkswagen", "modelo": "ID.4", "ano_matriculacion": 2024, "numero_plazas": 5, "autonomia_km": 520, "color": "Rojo", "imagen": "VW2.png", "estado": "disponible", "nombre_concesionario": "Concesionario 8" },
+
+    { "matricula": "NUEVO-025", "marca": "Volvo", "modelo": "EX30", "ano_matriculacion": 2024, "numero_plazas": 5, "autonomia_km": 344, "color": "Blanco", "imagen": "volvo2.png", "estado": "disponible", "nombre_concesionario": "Concesionario 9" },
+    { "matricula": "NUEVO-026", "marca": "Volkswagen", "modelo": "ID.7", "ano_matriculacion": 2024, "numero_plazas": 5, "autonomia_km": 600, "color": "Azul Oscuro", "imagen": "VW5.png", "estado": "disponible", "nombre_concesionario": "Concesionario 9" },
+    { "matricula": "NUEVO-027", "marca": "Tesla", "modelo": "Model 3", "ano_matriculacion": 2023, "numero_plazas": 5, "autonomia_km": 491, "color": "Blanco", "imagen": "tesla6.png", "estado": "disponible", "nombre_concesionario": "Concesionario 9" },
+
+    { "matricula": "NUEVO-028", "marca": "BYD", "modelo": "Seal", "ano_matriculacion": 2024, "numero_plazas": 5, "autonomia_km": 570, "color": "Azul Claro", "imagen": "byd_seal1.png", "estado": "disponible", "nombre_concesionario": "Concesionario 10" },
+    { "matricula": "NUEVO-029", "marca": "Tesla", "modelo": "Model 3", "ano_matriculacion": 2023, "numero_plazas": 5, "autonomia_km": 491, "color": "Rojo", "imagen": "tesla2.png", "estado": "disponible", "nombre_concesionario": "Concesionario 10" },
+    { "matricula": "NUEVO-030", "marca": "Volkswagen", "modelo": "ID.7", "ano_matriculacion": 2024, "numero_plazas": 5, "autonomia_km": 600, "color": "Rojo", "imagen": "VW4.png", "estado": "disponible", "nombre_concesionario": "Concesionario 10" },
+    { "matricula": "NUEVO-031", "marca": "Volvo", "modelo": "EX30", "ano_matriculacion": 2024, "numero_plazas": 5, "autonomia_km": 344, "color": "Amarillo", "imagen": "volvo3.png", "estado": "disponible", "nombre_concesionario": "Concesionario 10" },
+    { "matricula": "NUEVO-032", "marca": "Tesla", "modelo": "Model 3", "ano_matriculacion": 2023, "numero_plazas": 5, "autonomia_km": 491, "color": "Gris Plata", "imagen": "tesla3.png", "estado": "disponible", "nombre_concesionario": "Concesionario 1" },
+    { "matricula": "NUEVO-033", "marca": "Tesla", "modelo": "Model 3", "ano_matriculacion": 2023, "numero_plazas": 5, "autonomia_km": 491, "color": "Gris Oscuro", "imagen": "tesla4.png", "estado": "disponible", "nombre_concesionario": "Concesionario 2" },
+    { "matricula": "NUEVO-034", "marca": "Volkswagen", "modelo": "ID.4", "ano_matriculacion": 2024, "numero_plazas": 5, "autonomia_km": 520, "color": "Azul Claro", "imagen": "VW3.png", "estado": "disponible", "nombre_concesionario": "Concesionario 3" }
+  ]
+}

@@ -1,0 +1,60 @@
+<%- include('partials/header', {titulo: 'GreenRide - Registro' , pagina: 'registro'}) %>
+
+    <main class="container">
+        <div class = "cuadrado">   
+            <form id="registroForm" class="needs-validation" novalidate method="POST" action="/registro">
+                <h2 class="text-center text-light mb-4">Registrar</h2>
+                
+                <div class="mb-3">
+                    <label for="nombre" class="form-label text-light">Nombre completo</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre completo" required>
+                    <div class="invalid-feedback">Introduzca su nombre completo</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label text-light">Correo</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="nombre@ucm.es" required>
+                    <div class="invalid-feedback">Debe ser un correo @ucm.es</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label text-light">Contraseña</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Mínimo 8 caracteres, una minuscula y una mayuscula" minlength="8" required>
+                    <div class="invalid-feedback">8 caracteres, una minuscula y una mayuscula</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="telefono" class="form-label text-light">Teléfono (opcional)</label>
+                    <input type="tel" class="form-control" id="telefono" name="telefono" pattern="[0-9]{9}" placeholder="123456789">
+                    <div class="invalid-feedback">Introduce 9 digitos.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="concesionario" class="form-label text-light">Concesionario</label>
+                    <select class="form-select" id="concesionario" name="concesionario" required>
+                        <option value="">Selecciona un concesionario</option>
+                    </select>
+                    <div class="invalid-feedback">Seleccione un concesionario</div>
+                </div>
+
+                <div class="mb-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="condiciones" id="condiciones" required>
+                        <label class="form-check-label text-light" for="condiciones">
+                            Acepta las condiciones
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit">Crear cuenta</button>
+
+                <div class="link text-center mt-3">
+                    <a href="/login">¿Ya tienes cuenta? Inicia sesión</a>
+                </div>
+            </form>
+        </div>
+
+    </main>
+
+
+<%- include('partials/footer', {pagina: 'registro' }) %>

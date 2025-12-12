@@ -1,0 +1,57 @@
+<div class="modal fade" id="accessibilityModal" tabindex="-1" aria-labelledby="accessibilityModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-dark">
+            <div class="modal-header">
+                <h5 class="modal-title" id="accessibilityModalLabel">
+                    <i class="bi bi-universal-access-circle me-2"></i>Opciones de Accesibilidad
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="mb-4">
+                    <h6 class="fw-bold">Contraste y Color</h6>
+                    <div class="btn-group w-100 " id="contrasteColor" role="group" aria-label="Opciones de contraste">
+                        <button type="button" class="btn btn-outline-primary" onclick="setContrast('normal')" id="btn-normal">Normal</button>
+                        <button type="button" class="btn btn-outline-dark" onclick="setContrast('high-contrast')" aria-label="Activar alto contraste">Alto contraste</button>
+                        <button type="button" class="btn btn-outline-secondary" onclick="setContrast('daltonismo')" aria-label="Activar modo daltonismo">Escala grises</button>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <h6 class="fw-bold">Tamaño fuente</h6>
+                    <div class="btn-group w-100" id="tamFuente" role="group" aria-label="Opciones de tamaño de fuente">
+                        <button type="button" class="btn btn-outline-primary" onclick="setFontSize('pequeño')">Pequeño</button>
+                        <button type="button" class="btn btn-outline-primary" onclick="setFontSize('normal')">Normal</button>
+                        <button type="button" class="btn btn-outline-primary" onclick="setFontSize('grande')">Grande</button>
+                    </div>
+                </div>
+
+                <div>
+                    <h6 class="fw-bold">Atajos de Teclado</h6>
+                    <ul class="list-group list-group-flush small">
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>Reservas Vehículo</span>
+                            <kbd>Alt + R</kbd>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>Mis Reservas</span>
+                            <kbd>Alt + H</kbd>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>Accesibilidad</span>
+                            <kbd>Alt + A</kbd>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal" id="guardar"
+                    <%= !user ? "disabled" : "" %>>Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>

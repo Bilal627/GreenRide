@@ -1,0 +1,66 @@
+<%- include('../partials/header', {titulo: 'GreenRide - Listado de Usuarios' , pagina: 'listarUsuarios' }) %>
+
+    <main class="container">
+        <div class="cuadrado">
+            <h2 class="text-light mb-4 text-center">Lista de Usuarios del Sistema</h2>
+
+            <% if (usuarios && usuarios.length> 0) { %>
+
+                <div class="table-responsive">
+                    <table class="table table-dark table-striped table-hover align-middle">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Correo</th>
+                                <th scope="col">Teléfono</th>
+                                <th scope="col">Rol</th>
+                                <th scope="col">Concesionario</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% usuarios.forEach((u)=> { %>
+                                <tr>
+                                    <th scope="row">
+                                        <%= u.id_usuario %>
+                                    </th>
+                                    <td>
+                                        <%= u.nombre %>
+                                    </td>
+                                    <td>
+                                        <%= u.correo %>
+                                    </td>
+                                    <td>
+                                        <%= u.telefono || 'N/A' %>
+                                    </td>
+                                    <td>
+                                        <% let rolClass='bg-primary' ; if (u.rol==='admin' ) { rolClass='bg-danger' ; }
+                                            else if (u.rol==='empleado' ) { rolClass='bg-info' ; } %>
+                                            <span class="badge <%= rolClass %>">
+                                                <%= u.rol.toUpperCase() %>
+                                            </span>
+                                    </td>
+                                    <td>
+                                        <%= u.nombre_concesionario || 'N/A' %>
+                                    </td>
+                                    
+                                </tr>
+                                <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+
+                <% } else { %>
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-12 col-md-8">
+                            <div class="cuadrado text-center p-5">
+                                <p class="lead text-white">No hay usuarios registrados en el sistema.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+
+        </div>
+    </main>
+
+    <%- include('../partials/footer', {pagina: 'listarUsuarios' }) %>

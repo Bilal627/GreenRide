@@ -1,0 +1,91 @@
+<%- include('partials/header', {titulo: 'GreenRide - Perfil' , pagina: 'perfil'}) %>
+
+<main class="container">
+
+    <div class="cuadrado p-3">
+
+        <h2 class="text-center text-light">Perfil del usuario</h2>
+
+        <form id="modificarPerfilForm" method="POST" class="needs-validation" novalidate>
+            <table class="table table-borderless text-light">
+
+                <tbody>
+
+                    <tr>
+                        <th class="text-start">ID:</th>
+                        <td class="text-start">
+                            <input type="text" id="id" name="id" class="form-control"
+                            value="<%=user.id %>" disabled>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th class="text-start">Nombre:</th>
+                        <td class="text-start">
+                            <input type="text" id="nombre" name="nombre" class="form-control"
+                            value="<%=user.nombre %>">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th class="text-start">Correo:</th>
+                        <td class="text-start">
+                            <input type="text" id="correo" name="correo" class="form-control"
+                            value="<%= user.correo %>" disabled>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th class="text-start">Contrasena:</th>
+                        <td class="text-start">
+                            <input type="text" id="contrasena" name="contrasena" class="form-control"
+                            value="<%=user.contrasena %>">
+                            <div class="invalid-feedback">8 caracteres, una minuscula y una mayuscula</div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th class="text-start">Telefono:</th>
+                        <td class="text-start">
+                            <input type="tel" id="telefono" name="telefono" class="form-control"
+                            value="<%=user.telefono %>" pattern="[0-9]{9}">
+                            <div class="invalid-feedback">Introduce 9 digitos.</div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th class="text-start">Concesionario:</th>
+                        <td class="text-start">
+                            <input type="text" id="id_concesionario" name="id_concesionario" class="form-control"
+                            value="<%= user.id_concesionario %>" disabled>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th class="text-start">Rol:</th>
+                        <td class="text-start">
+
+                            <input type="text" id="rol" name="rol" class="form-control"
+                            value="<%= user.rol %>" disabled>
+                        
+                        
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <button type="submit" class="btn btn-primary">Modificar datos</button>
+            
+        </form>
+
+        
+
+    </div>
+
+
+</main>
+
+
+<%- include('partials/footer', {pagina: 'perfil' }) %>

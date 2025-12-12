@@ -1,0 +1,95 @@
+<%- include('partials/header', {titulo: 'GreenRide - Inicio' , pagina: 'inicio' }) %>
+
+    <main class="mt-5">
+
+        <h1 class="text-center">Gestión de Flotas de Vehículos Eléctricos</h1>
+        <h2 class="text-center">Plataforma de movilidad sostenible</h2>
+
+        <div class="parrafo">
+            <p class="text-center">
+                Bienvenido a nuestra plataforma de <strong>gestión de flotas de vehículos eléctricos
+                    compartidos</strong>, una
+                solución <em>intuitiva</em> y <em>centralizada</em> que te permite controlar en tiempo real el
+                <strong>estado de
+                    cada vehículo</strong>, supervisar el <strong>nivel de batería</strong>,
+                programar mantenimientos y optimizar la asignación de recursos.
+                Con una interfaz clara y accesible desde cualquier dispositivo, la aplicación facilita la
+                <strong>toma de decisiones</strong> y mejora la <em>eficiencia de la flota</em>, garantizando un
+                servicio <em>sostenible</em>, <em>ágil</em> y siempre bajo control.
+            </p>
+        </div>
+
+        <div class="container my-5">
+            <div class="row g-4">
+                <!--Tarjeta 1-->
+                <div class="col-md-4 tarjeta">
+                    <div class="card cuadrado">
+                        <img src="/img/monitoreo.png" class="card-img-top" alt="Monitoreo en tiempo real">
+                        <div class="card-body">
+                            <h5 class="card-title text-center text-light">Monitoreo en tiempo real</h5>
+                            <p class="card-text text-center text-light">Controla el estado de cada vehículo y su
+                                ubicación al instante.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--Tarjeta 2-->
+                <div class="col-md-4">
+                    <div class="card cuadrado">
+                        <img src="/img/gestion_reserva.png" class="card-img-top" alt="Gestión de reservas">
+                        <div class="card-body">
+                            <h5 class="card-title text-center text-light">Gestión de reservas</h5>
+                            <p class="card-text text-center text-light">Permite reservar vehículos fácilmente y
+                                consultar el historial de uso.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--Tarjeta 3-->
+                <div class="col-md-4">
+                    <div class="card cuadrado">
+                        <img src="/img/rutas.png" class="card-img-top" alt="Optimización de rutas y recursos">
+                        <div class="card-body">
+                            <h5 class="card-title text-center text-light">Optimización de rutas y recursos</h5>
+                            <p class="card-text text-center text-light">Mejora la eficiencia de la flota y reduce
+                                tiempos de espera.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--Tarjeta 4-->
+                <div class="col-md-4">
+                    <div class="card cuadrado">
+                        <img src="/img/bateria.png" class="card-img-top" alt="Control de batería y mantenimiento">
+                        <div class="card-body">
+                            <h5 class="card-title text-center text-light">Control de batería y mantenimiento</h5>
+                            <p class="card-text text-center text-light">Supervisa niveles de carga y agenda
+                                mantenimientos preventivos.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--Tarjeta 5-->
+                <div class="col-md-4">
+                    <div class="card cuadrado">
+                        <img src="/img/roles.png" class="card-img-top" alt="Acceso seguro y roles diferenciados">
+                        <div class="card-body">
+                            <h5 class="card-title text-center text-light">Acceso seguro y roles diferenciados</h5>
+                            <p class="card-text text-center text-light">Usuarios y administradores con permisos
+                                específicos para cada función.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--Tarjeta 6-->
+                <div class="col-md-4">
+                    <div class="card cuadrado">
+                        <img src="/img/accesibilidad.png" class="card-img-top" alt="Interfaz accesible y responsive">
+                        <div class="card-body">
+                            <h5 class="card-title text-center text-light">Interfaz accesible y responsive</h5>
+                            <p class="card-text text-center text-light">Uso sencillo desde cualquier dispositivo y
+                                adaptable a diferentes necesidades de accesibilidad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <%- include('partials/footer', {pagina: 'inicio' }) %>

@@ -1,0 +1,58 @@
+<%- include('../partials/header', {titulo: 'GreenRide - Listado de Concesionarios' , pagina: 'listarConcesionarios' })
+    %>
+
+    <main class="container">
+        <div class="cuadrado">
+            <h2 class="text-light mb-4 text-center">Lista de Concesionarios Registrados</h2>
+
+            <% if (concesionarios && concesionarios.length> 0) { %>
+
+                <div class="table-responsive">
+                    <table class="table table-dark table-striped table-hover align-middle">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Ciudad</th>
+                                <th scope="col">Dirección</th>
+                                <th scope="col">Teléfono</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% concesionarios.forEach((c)=> { %>
+                                <tr>
+                                    <th scope="row">
+                                        <%= c.id_concesionario %>
+                                    </th>
+                                    <td>
+                                        <%= c.nombre %>
+                                    </td>
+                                    <td>
+                                        <%= c.ciudad %>
+                                    </td>
+                                    <td>
+                                        <%= c.direccion %>
+                                    </td>
+                                    <td>
+                                        <%= c.telefono_contacto %>
+                                    </td>
+                                </tr>
+                                <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+
+                <% } else { %>
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-12 col-md-8">
+                            <div class="cuadrado text-center p-5">
+                                <p class="lead text-white">No hay concesionarios registrados en el sistema.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+
+        </div>
+    </main>
+
+    <%- include('../partials/footer', {pagina: 'listarConcesionarios' }) %>

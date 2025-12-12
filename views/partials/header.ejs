@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="/img/image.png" type="image/png">
+    <link rel="stylesheet" href="/recurso-bootstrap/public/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <title><%= titulo %></title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="/img/image.png" alt="Logo" width="30" class="d-inline-block align-text-top">
+                    Green<span class="logo-ride"><strong>Ride</strong></span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item me-3">
+                            <a class="nav-link <%= (pagina === 'inicio') ? 'active' : '' %>" href="/">Inicio</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link <%= (pagina === 'vehiculos') ? 'active' : '' %>" href="/vehiculos">Vehiculos</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link <%= (pagina === 'reserva') ? 'active' : '' %>" href="/reserva">Reserva</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#accessibilityModal" role="button">
+                                <i class="bi bi-universal-access-circle me-1"></i>Accesibilidad
+                            </a>
+                        </li>
+                        <% if(user && user.rol === "admin"){ %>
+                            <li class="nav-item me-3">
+                                <a class="nav-link <%= (pagina === 'adminIni') ? 'active' : '' %>" href="/adminIni">Admininistración</a>
+                            </li>
+                            <li class="nav-item me-3">
+                                <a class="nav-link <%(pagina === 'adminReservas') ? 'active' : '' %>" href="/adminReservas">Total Reservas</a>
+                            </li>
+                            <li class="nav-item me-3">
+                                <a class="nav-link <%= (pagina === 'mis_reservas') ? 'active' : '' %>" href="/mis_reservas">Mis Reservas</a>
+                            </li>
+                        <% } %>
+                        <% if(user && user.rol === "empleado"){ %>
+                            <li class="nav-item me-3">
+                                <a class="nav-link <%= (pagina === 'mis_reservas') ? 'active' : '' %>" href="/mis_reservas">Mis Reservas</a>
+                            </li>
+                        <% } %>
+                    </ul>
+
+                    <ul class = "navbar-nav ms-auto">
+
+                        <% if(user){ %>
+                            <li class="nav-item me-2">
+                                <a class = "btn btn-outline-primary" href="/perfil"><%= user.nombre %></a>
+                            </li>
+                            <li class="nav-item me-2">
+                                <a class = "btn btn-outline-primary" href="/cerrar">Cerrar sesion</a>
+                            </li>
+                            
+                        <% } else { %>
+                            <li class="nav-item me-2">
+                                <a class = "btn btn-outline-primary" href="/login">Iniciar sesion</a>
+                            </li>
+                            <li class="nav-item me-2">
+                                <a class="btn btn-outline-primary" href="/registro">Registrar</a>
+                            </li>
+
+                        <% } %>
+
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+        
+
+    </header>

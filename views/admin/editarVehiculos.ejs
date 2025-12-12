@@ -1,0 +1,101 @@
+<%- include('../partials/header', {titulo: 'GreenRide - editarVehiculos' , pagina: 'editarVehiculos'}) %>
+
+<main class="container">
+    <div class="cuadrado">   
+        <form id="editarVehiculosForm" class="needs-validation" novalidate>
+            <h2 class="text-center text-light mb-4">Editar Vehículo</h2>
+
+                <div class="mb-3">
+                    <label for="vehiculo" class="form-label text-light">vehiculo</label>
+                    <select class="form-select" id="vehiculo" name="vehiculo" required>
+                        <option value="">Selecciona un vehiculo</option>
+                    </select>
+                    <div class="invalid-feedback">Seleccione un vehiculo</div>
+                </div>
+            
+
+            <div class="row">
+
+                <!-- COLUMNA IZQUIERDA -->
+                <div class="col-md-6">
+
+                    <div class="mb-3">
+                        <label class="form-label text-light">Matrícula</label>
+                        <input type="text" class="form-control" id="matricula" required disabled>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label text-light">Marca</label>
+                        <input type="text" class="form-control" id="marca" required disabled>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label text-light">Modelo</label>
+                        <input type="text" class="form-control" id="modelo" required disabled>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label text-light">Año de matriculación</label>
+                        <input type="number" class="form-control" id="ano_matriculacion" required disabled>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label text-light">Número de plazas</label>
+                        <input type="number" class="form-control" id="numero_plazas" required disabled>
+                    </div>
+
+                </div>
+
+                <!-- COLUMNA DERECHA -->
+                <div class="col-md-6">
+
+                    <div class="mb-3">
+                        <label class="form-label text-light">Autonomía (km)</label>
+                        <input type="number" class="form-control" id="autonomia_km" required disabled>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label text-light">Color</label>
+                        <select class="form-select" id="color" required disabled>
+                            <option value="">Cualquiera</option>
+                            <option value="rojo">rojo</option>
+                            <option value="negro">negro</option>
+                            <option value="blanco">blanco</option>
+                            <option value="azul">azul</option>
+                            <option value="verde">Verde</option>
+                            <option value="amarillo">amarillo</option>
+                            <option value="gris">gris</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label text-light">Imagen (URL)</label>
+                        <input type="text" class="form-control" id="imagen" required disabled>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label text-light">Estado</label>
+                        <select class="form-select" id="estado" required disabled>
+                            <option value="">Selecciona un estado</option>
+                            <option value="disponible">Disponible</option>
+                            <option value="reservado">Reservado</option>
+                            <option value="mantenimiento">Mantenimiento</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="concesionario" class="form-label text-light">Concesionario</label>
+                        <select class="form-select" id="concesionario" name="concesionario" required disabled>
+                            <option value="">Selecciona un concesionario</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 mt-3" id="editar" disabled> Editar</button>
+        </form>
+    </div>
+</main>
+
+<%- include('../partials/footer', {pagina: 'editarVehiculos' }) %>

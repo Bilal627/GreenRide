@@ -1,0 +1,24 @@
+<%- include('../partials/header', {titulo: 'GreenRide - bajaVehiculos' , pagina: 'bajaVehiculos'}) %>
+
+<main class="container">
+        <div class = "cuadrado">   
+            <form id="bajaVehiculosForm" class="needs-validation" novalidate>
+                <h2 class="text-center text-light mb-4">Dar de baja Vehiculos</h2>
+                
+                <div class="mb-3">
+                    <label for="vehiculo" class="form-label text-light">ID Vehiculo</label>
+                    <select class="form-select" id="vehiculo" name="vehiculo" required>
+                        <option value="">Selecciona un vehiculo</option>
+                    </select>
+                    <div class="invalid-feedback">Seleccione un vehiculo</div>
+                </div>
+
+                <button type="submit">Baja</button>
+
+            </form>
+        </div>
+
+    </main>
+
+
+<%- include('../partials/footer', {pagina: 'bajaVehiculos' }) %>

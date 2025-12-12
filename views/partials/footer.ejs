@@ -1,0 +1,78 @@
+
+<footer>
+    <div>GreenRide. &copy; 2025.</div>
+</footer>
+
+
+<%- include('accesibilidad')%>
+
+<script src="/recurso-bootstrap/public/js/bootstrap.bundle.min.js"></script>
+
+<script src="/js/accesibilidad.js"></script>
+
+<% if(pagina === 'inicio') { %>
+
+    <script src="/js/inicio.js"></script>
+
+<% } else if(pagina === 'reserva') { %>
+
+    <script src="/js/reserva.js"></script>
+
+<% } else if(pagina === 'vehiculos') { %>
+
+    <script src="/js/vehiculos.js"></script>
+
+
+<% } else if(pagina === 'registro') { %>
+
+    <script src="/js/registro.js"></script>
+
+<% } else if(pagina === 'login') { %>
+
+    <script src="/js/login.js"></script>
+
+<% } else if(pagina === 'perfil') { %>
+
+    <script src="/js/perfil.js"></script>
+
+<% } else if(pagina === 'altaConcesionarios') { %>
+
+    <script src="/js/admin/altaConcesionarios.js"></script>
+
+<% } else if(pagina === 'eliminarConcesionarios') { %>
+
+    <script src="/js/admin/eliminarConcesionarios.js"></script>
+
+<% } else if(pagina === 'editarConcesionarios') { %>
+
+    <script src="/js/admin/editarConcesionarios.js"></script>
+
+<% } else if(pagina === 'editarUsuarios') { %>
+
+    <script src="/js/admin/editarUsuarios.js"></script>
+
+<% } else if(pagina === 'altaVehiculos') { %>
+
+    <script src="/js/admin/altaVehiculos.js"></script>
+
+<% } else if(pagina === 'bajaVehiculos') { %>
+
+    <script src="/js/admin/bajaVehiculos.js"></script>
+
+<% } else if(pagina === 'editarVehiculos') { %>
+
+    <script src="/js/admin/editarVehiculos.js"></script>
+
+<% } else if(pagina === 'adminReservas') { %>
+
+    <script src="/js/admin/adminReservas.js"></script>
+
+<% } else if(pagina === 'mis_reservas') { %>
+
+    <script src="/js/mis_reservas.js"></script>
+
+
+<% }%>
+
+</body>
+</html>

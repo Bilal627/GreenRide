@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <link href="/recurso-bootstrap/public/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="cuadrado col-lg-8">
+
+            <h2 class="text-center mb-4">
+                <%= title %>
+            </h2>
+            <p class="text-center lead mb-4">
+                <%= message %>
+            </p>
+
+            <% if (message.includes('vacía') || message.includes('datos')) { %>
+                <div class="alert alert-warning text-dark text-center mb-4" role="alert">
+                    ⚠️ Selecciona el archivo JSON para cada acción.
+                </div>
+
+                <% if (typeof step !=='undefined' && step===1) { %>
+                    <div class="mb-4 border-bottom pb-4">
+                        <h5 class="mb-3 text-center text-light">Paso 1: Administrador Principal y Concesionarios</h5>
+                        <form action="/carga-concesionarios-admin" method="POST" enctype="multipart/form-data"
+                            class="buttons">
+                            <div class="mb-2">
+                                <input class="form-control" type="file" name="archivo_json" accept=".json" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">
+                                Cargar Admin y Concesionarios
+                            </button>
+                        </form>
+                    </div>
+                <% } %>
+
+                <% if (typeof step !=='undefined' && step===2) { %>
+                    <div class="mb-4 border-bottom pb-4">
+                        <h5 class="mb-3 text-center text-light">Paso 2: Flota de Vehículos</h5>
+                        <form action="/carga-vehiculos" method="POST" enctype="multipart/form-data"
+                            class="buttons">
+                            <div class="mb-2">
+                                <input class="form-control" type="file" name="archivo_json" accept=".json"
+                                    required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">
+                                Cargar Vehículos
+                            </button>
+                        </form>
+                    </div>
+                <% } %>
+
+
+                <% if (typeof step !=='undefined' && step===3) { %>
+                    <div class="alert alert-success text-center">
+                        🎉 ¡Carga completa! La base de datos está lista.
+                    </div>
+                    <div class="text-center mt-3">
+                        <a href="/" class="btn btn-primary btn-lg">Ir a Inicio</a>
+                    </div>
+                <% } %>
+            <% } %>
+
+                <% if (logs && logs.length> 0) { %>
+                    <h2 class="h5 mt-4 text-center">Logs del Proceso:</h2>
+                    <ul class="list-group log-list mt-3">
+                        <% logs.forEach(function(log) { %>
+                            <li
+                                class="list-group-item list-group-item-<%= log.startsWith('✅') ? 'success' : (log.startsWith('🔄') ? 'info' : (log.startsWith('❌') ? 'danger' : 'light')) %> text-dark">
+                                <%= log %>
+                            </li>
+                            <% }); %>
+                    </ul>
+                    <div class="link">
+                        <a href="/" class="btn btn-secondary mt-4">Volver a Inicio</a>
+                    </div>
+                    <% } %>
+
+        </div>
+    </div>
+</body>
+
+</html>

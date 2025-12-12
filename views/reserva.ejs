@@ -1,0 +1,44 @@
+<%- include('partials/header', {titulo: 'GreenRide - Reserva' , pagina: 'reserva' }) %>
+
+    <main class="container">
+        <div class="cuadrado">
+            <form id="registroForm" class="needs-validation" novalidate method="POST" action="/reserva">
+                <h2 class="text-center text-light mb-4">Reserva</h2>
+
+                <div class="mb-3">
+                    <label for="vehiculos" class="form-label text-light">Vehiculos</label>
+                    <select class="form-select" id="vehiculos" name="id_vehiculo" required>
+                        <option value="">Seleccione un vehiculo</option>
+                    </select>
+                    <div class="invalid-feedback">Seleccione un concesionario</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="fechainicio" class="form-label text-light">Fecha y Hora de inicio</label>
+                    <input type="datetime-local" class="form-control" id="fechainicio" name="fecha_inicio" required>
+                    <div class="invalid-feedback">No puede ser anterior al dia actual</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="fechafin" class="form-label text-light">Fecha y Hora de fin</label>
+                    <input type="datetime-local" class="form-control" id="fechafin" name="fecha_fin" required>
+                    <div class="invalid-feedback">No puede ser anterior a la fecha de inicio</div>
+                </div>
+
+                <div class="mb-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="condiciones" id="condiciones" required>
+                        <label class="form-check-label text-light" for="condiciones">
+                            Acepta las condiciones
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" >Submit</button>
+                <button type="reset" >Reset</button>
+            </form>
+        </div>
+    </main>
+    
+
+<%- include('partials/footer', {pagina: 'reserva' }) %>

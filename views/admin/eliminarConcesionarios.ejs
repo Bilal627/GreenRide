@@ -1,0 +1,24 @@
+<%- include('../partials/header', {titulo: 'GreenRide - eliminarConcesionarios' , pagina: 'eliminarConcesionarios'}) %>
+
+<main class="container">
+        <div class = "cuadrado">   
+            <form id="eliminarConcesionariosForm" class="needs-validation" novalidate>
+                <h2 class="text-center text-light mb-4">Eliminar Concesionario</h2>
+                
+                <div class="mb-3">
+                    <label for="concesionario" class="form-label text-light">Concesionario</label>
+                    <select class="form-select" id="concesionario" name="concesionario" required>
+                        <option value="">Selecciona un concesionario</option>
+                    </select>
+                    <div class="invalid-feedback">Seleccione un concesionario</div>
+                </div>
+
+                <button type="submit">Eliminar</button>
+
+            </form>
+        </div>
+
+    </main>
+
+
+<%- include('../partials/footer', {pagina: 'eliminarConcesionarios' }) %>

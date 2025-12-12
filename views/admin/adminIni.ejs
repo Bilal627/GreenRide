@@ -1,0 +1,110 @@
+<%- include('../partials/header', {titulo: 'GreenRide - Administracion' , pagina: 'adminIni' }) %>
+
+
+    <main class="container admin">
+        <div class="text-center text-white animate-title">
+            <h1 class="title-admin">Panel de Administración</h1>
+            <p class="p-admin">Vision general y gestión de la plataforma</p>
+        </div>
+
+        <div class="row w-100 justify-content-center">
+            <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex justify-content-center">
+                <div class="cuadrado h-100 d-flex flex-column justify-content-center">
+                    <h2>Total Reservas</h2>
+                    <h1 class="display-4 fw-bold text-light text-center"><%= stats.total %></h1>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex justify-content-center">
+                <div class="cuadrado h-100 d-flex flex-column justify-content-center align-items-center">
+                    <h2>Vehículo mas usado</h2>
+                    <% if(stats.topVehiculo) { %>
+                    <h5 class="mb-0 text-light"><%= stats.topVehiculo.marca %> <%= stats.topVehiculo.modelo %> (<%= stats.topVehiculo.matricula %>)</h5>
+                    <div class="mt-2">
+                        <span class=" bg-success rounded-pill px-3"><%= stats.topVehiculo.total_usos %> Reservas</span>
+                    </div>
+                    <% } else { %>
+                        <h5 class="mb-0 text-light">No hay reservas aún</h5>
+                        <% } %>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex justify-content-center">
+                <div class="cuadrado h-100 d-flex flex-column justify-content-between">
+                    <h2>Reservas por Concesionario</h2>
+                    <ul class="list-group list-group-flush bg-transparent">
+                        <% stats.concesionarios.forEach(c =>{ %>
+                            <li class="list-group-item d-flex justify-content-between align-items-center bg-transparent border-0 py-1">
+                                <h5 class="text-truncate text-light"><%= c.nombre %></h5>
+                                <span class="badge bg-secondary rounded-pill"><%= c.num_reservas %></span>
+                            </li>
+                        <% }) %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row w-100 justify-content-center">
+
+            <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex justify-content-center">
+                <div class="cuadrado h-100 d-flex flex-column justify-content-between">
+                    <div>
+                        <div class="mb-3 text-center" style="color: rgb(112, 150, 248);">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-car-front-fill" viewBox="0 0 16 16">
+                                <path d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679c.033.161.049.325.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.807.807 0 0 0 .381-.404l.792-1.848ZM3 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2m10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2M6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2z" />
+                            </svg>
+                        </div>
+                        <h2>Vehículos</h2>
+                        <p>Añadir, editar o dar de baja vehículos de la flota.</p>
+                    </div>
+                    <a href="/altaVehiculos" class="btn text-center pt-2">Alta</a>
+                
+                    <a href="/bajaVehiculos" class="btn text-center pt-2">Baja</a>
+
+                    <a href="/editarVehiculos" class="btn text-center pt-2">Editar</a>              
+                
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex justify-content-center">
+                <div class="cuadrado h-100 d-flex flex-column justify-content-between">
+                    <div>
+                        <div class="mb-3 text-center" style="color: #0ac1e5;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                                <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+                            </svg>
+                        </div>
+                        <h2>Empleados</h2>
+                        <p>Añadir, editar o dar de baja a un empleado.</p>
+                    </div>
+                    <a href="/editarUsuarios" class="btn text-center pt-2">Editar</a>
+
+                    <a href="/listarUsuarios" class="btn text-center pt-2">Listar Usuarios</a>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex justify-content-center">
+                <div class="cuadrado h-100 d-flex flex-column justify-content-between">
+                    <div>
+                        <div class="mb-3 text-center" style="color: rgb(68, 238, 139);">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-shop" viewBox="0 0 16 16">
+                                <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 6.75 6.875 2.37 2.37 0 0 1 1.75 5.625V5.37a1.5 1.5 0 0 1 .652-1.176zM1.5 7.051a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5z" />
+                            </svg>
+                        </div>
+                        <h2>Concesionarios</h2>
+                        <p>Añadir, editar o dar de baja a un concesionario.</p>
+                    </div>
+                    <a href="/altaConcesionarios" class="btn text-center pt-2">Alta</a>
+
+                    <a href="/eliminarConcesionarios" class="btn text-center pt-2">Eliminar</a>
+        
+                    <a href="/editarConcesionarios" class="btn text-center pt-2">Editar</a>
+
+                    <a href="/listarConcesionarios" class="btn text-center pt-2">Listar Concesionarios</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <%- include('../partials/footer', {pagina: 'adminIni' }) %>

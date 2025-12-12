@@ -1,0 +1,36 @@
+<%- include('partials/header', {titulo: 'GreenRide - Login' , pagina: 'login'}) %>
+    
+    <main class="container">
+        <div class ="cuadrado">
+            <form id="loginForm" class="needs-validation" novalidate >
+                <h2>Acceso</h2>
+
+                <div class = "mb-3">
+                    <label for="email" class="form-label text-light">Correo</label>
+                    <input type="email" class="form-control"
+                    id="email" name="email" placeholder="email@ucm.es"
+                    pattern="^[A-Za-z0-9._%+-]+@ucm\.es$"
+                    required>
+                    <div class="invalid-feedback">Debe ser un correo de UCM</div>
+
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label text-light">Contrasena</label>
+                    <input type="password" class="form-control"
+                        id="password" name="password" placeholder="********" minlength="8"
+                        required>
+                        <div class="invalid-feedback">Minimo 8 caracteres</div>
+
+                </div>
+            
+                <button type ="submit" class="btn">Acceder</button>
+
+                <div class="link">
+                <a href="/registro"> Crear cuenta </a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+<%- include('partials/footer', {pagina: 'login' }) %>

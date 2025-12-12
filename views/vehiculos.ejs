@@ -1,0 +1,67 @@
+<%- include('partials/header', {titulo: 'GreenRide - Nuestros Vehiculos' , pagina: 'vehiculos' }) %>
+
+<main class="container">
+    <div class="cuadrado catalogo">
+        <div class="text-center mb-5">
+            <h2>Nuestra Flota</h2>
+            <p>Encuentra el vehículo perfecto para tu proximo viaje</p>
+        </div>
+
+        <div id="filtro" class="row g-3 mb-3">
+            <div class="col-md-4">
+                <label class="form-label text-light">Autonomía mínima (km)</label>
+                <input type="number" class="form-control" id="autonomia_km" min="0">
+            </div>
+            <div class="col-md-4">
+                <label class="form-label text-light">Plazas</label>
+                <input type="number" class="form-control" id="plazas" min="1">
+            </div>
+            <div class="col-md-4">
+                <label class="form-label text-light">Color</label>
+                <select class="form-select" id="color">
+                    <option value="">Cualquiera</option>
+                    <option value="rojo">rojo</option>
+                    <option value="negro">negro</option>
+                    <option value="blanco">blanco</option>
+                    <option value="azul">azul</option>
+                    <option value="verde">verde</option>
+                    <option value="amarillo">amarillo</option>
+                    <option value="gris">gris</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="row g-4"> <% if (vehiculos && vehiculos.length > 0) { %>
+            <% vehiculos.forEach((v) => {%>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card tarjeta-vehiculo h-100">
+                    <div class="img-container">
+                        <img src="<%= v.imagen ? '/recurso-imagenes/vehiculos/' + v.imagen : 'https://via.placeholder.com/400x250?text=GreenRide' %>"
+                            alt="<%= v.marca %> <%= v.modelo %>" class="card-img-top">
+                    </div>
+                
+
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title, text-light fw-bold mb-3"><%= v.marca %> <%= v.modelo %> </h3>
+                        <ul class="list-unstyled text-light small mb-4 mt-auto">
+                            <li><strong>Matricula:</strong> <%= v.matricula %></li> 
+                            <li><strong>Año:</strong> <%= v.ano_matriculacion %></li> 
+                            <li><strong>Plazas:</strong> <%= v.numero_plazas %></li> 
+                            <li><strong>Autonomia (km):</strong> <%= v.autonomia_km %></li> 
+                            <li><strong>Color:</strong> <%= v.color %></li> 
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        <% }) %>
+        <% } else { %>
+            <div class="col-12 text-center text-light">
+                <p>No hay vehiculos para mostrar en este momento.</p>
+            </div>
+            <% } %>
+        </div>
+    </div>
+</main>
+
+<%- include('partials/footer', {pagina: 'vehiculos' }) %>

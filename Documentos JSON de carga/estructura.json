@@ -1,0 +1,22 @@
+{
+  "admin_inicial": {
+    "nombre": "Admin General",
+    "correo": "admin@ucm.es",
+    "contrasena": "$2a$12$Qj0FYYq6z.lTb63wVxQ42.1a198Erpnq4lVUyoDHLnJfc8PbDOSla",
+    "telefono": "910000001",
+    "rol": "admin",
+    "id_concesionario": null
+  },
+  "concesionarios": [
+    { "nombre": "Concesionario 1", "ciudad": "Madrid", "direccion": "Calle Principal 1", "telefono_contacto": "910000001" },
+    { "nombre": "Concesionario 2", "ciudad": "Madrid", "direccion": "Calle Principal 2", "telefono_contacto": "910000002" },
+    { "nombre": "Concesionario 3", "ciudad": "Madrid", "direccion": "Calle Principal 3", "telefono_contacto": "910000003" },
+    { "nombre": "Concesionario 4", "ciudad": "Madrid", "direccion": "Calle Principal 4", "telefono_contacto": "910000004" },
+    { "nombre": "Concesionario 5", "ciudad": "Madrid", "direccion": "Calle Principal 5", "telefono_contacto": "910000005" },
+    { "nombre": "Concesionario 6", "ciudad": "Barcelona", "direccion": "Avenida Diagonal 6", "telefono_contacto": "930000006" },
+    { "nombre": "Concesionario 7", "ciudad": "Barcelona", "direccion": "Avenida Diagonal 7", "telefono_contacto": "930000007" },
+    { "nombre": "Concesionario 8", "ciudad": "Valencia", "direccion": "Plaza del Mar 8", "telefono_contacto": "960000008" },
+    { "nombre": "Concesionario 9", "ciudad": "Valencia", "direccion": "Plaza del Mar 9", "telefono_contacto": "960000009" },
+    { "nombre": "Concesionario 10", "ciudad": "Sevilla", "direccion": "Calle Betis 10", "telefono_contacto": "950000010" }
+  ]
+}

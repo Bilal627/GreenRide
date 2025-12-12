@@ -1,0 +1,394 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: url("/img/fondoLogin.jpg") no-repeat center center/cover;
+  overflow-x: hidden;
+}
+
+/* ----- HEADER ----- */
+
+.logo-ride {
+    color: #0d6efd;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 10;
+}
+
+header.scrolled {
+    background-color: #0007;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header.scrolled .nav-link {
+    color: white;
+}
+
+header.scrolled .btn {
+    color: #fff;
+    border-color: #fff;
+}
+
+header.scrolled .nav-item{
+    border-color: #fff;
+}
+
+.nav-item:hover {
+    border: 1px solid #48e;
+    border-radius: 10%;
+}
+
+.navbar-nav {
+    padding: 1rem;
+}
+
+.navbar-toggler{
+    font-size: 200px;
+    color: #0d6efd; 
+    border: none; 
+    background: none;
+}
+
+/* ----- MAIN ----- */
+
+main{
+    padding-top: 80px;
+    min-height: calc(100vh - 80px);
+    overflow: auto;
+}
+
+.main-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1, h2 {
+    color: #48e;
+}
+
+.parrafo {
+    background: #d3dce7;
+    border-left: 5px solid #007bff;
+    border-radius: 15px;
+    padding: 25px 30px;
+    margin: 40px auto;
+    max-width: 900px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: aparecer 2s ease-in-out both;
+}
+
+.parrafo p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+
+.error {
+    color: red;
+    font-size: 0.9em;
+    display: block;
+    margin-left: 10px;
+}
+
+.formulario{
+    background-color: #0005;
+    padding: 2rem;
+    margin: 5rem;
+    border-radius: 10%;
+}
+
+
+.is-valid {
+    border-color: #198754;
+    background-color: #bedbce;
+}
+
+.is-invalid {
+    border-color: #dc3545;
+    background-color: #d9b9bd;
+}   
+
+button {
+    width: 20rem;
+    margin: center;
+}
+
+.buttons{
+    align-items: center;
+    text-align: center;
+}
+
+.progress-bar{
+    width: 0%;
+    transition: width 0.3s ease-in-out;
+    background-color: green;
+}
+
+/* ----- FOOTER ----- */
+
+footer{
+    background-color: #0007;
+    padding: 1.5rem;
+    text-align: center;
+    width: 100%;
+    color:whitesmoke;
+}
+
+
+/* ----- TRANSICIONES ----- */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 150px;
+  padding-bottom: 50px;
+}
+
+.cuadrado {
+  min-width: 390px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  padding: 40px 30px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.cuadrado h2 {
+  font-size: 28px;
+  color: aliceblue;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cuadrado p {
+    font-size: 18px;
+    color: aliceblue;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cuadrado button,
+.cuadrado .btn {
+  width: 200px;    
+  padding: 8px 20px;
+  display: block;
+  margin: 10px auto 0; 
+  background: aliceblue;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+  transition: all 0.3s ease;
+}
+
+.cuadrado button:hover,
+.cuadrado .btn:hover {
+  background: rgb(39, 65, 228);
+  color: black;
+}
+
+.link {
+  font-size: 15px;
+  color: aliceblue;
+  text-align: center;
+  margin-top: 15px;
+}
+
+/*error 404*/
+.error404{
+    color: whitesmoke;
+}
+
+/*catalogo vehiculos*/
+.catalogo {
+    width: 95%;
+    max-width: 1300px;
+    min-width: 95%;
+}
+
+.catalogo h3{
+    font-size: 1.5rem;
+}
+
+.tarjeta-vehiculo{
+    border: 1px solid #000;;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-vehiculo:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.img-container {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    background-color: #0002;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tarjeta-vehiculo .card-body{
+    color: whitesmoke;
+    background-color: transparent;
+}
+
+.tarjeta-vehiculo .card-title{
+    color: whitesmoke;
+}
+
+.bagde-estado{
+    position: absolute; 
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    border-radius: 20px;
+}
+
+/*reservas*/
+.parrafo-reservas{
+    font-size: 1rem;
+    text-align: left;
+}
+
+/*administracion*/
+.admin{
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.title-admin{
+    color:aliceblue;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.p-admin{
+    color: aliceblue;
+    font-size: 1.2rem;
+}
+
+.cuadrado svg {
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cuadrado:hover svg{
+    transform: scale(1.4);
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+}
+
+
+/*ACCESIBILIDAD*/
+html.font-pequeño{
+    font-size: 80%;
+}
+
+html.font-normal {
+    font-size: 100%;
+}
+
+html.font-grande {
+    font-size: 120%;
+}
+
+body.high-contrast {
+    background: #000 !important;
+    color: #fff !important;
+}
+
+body.high-contrast .card,
+body.high-contrast .navbar,
+body.high-contrast .modal-content,
+body.high-contrast header{
+    background-color: #000 !important;
+    border: 2px solid #ff0 !important;
+    color: #fff !important;
+}
+
+body.high-contrast a,
+body.high-contrast h1, 
+body.high-contrast h2,
+body.high-contrast p,
+body.high-contrast .logo-ride,
+body.high-contrast {
+    color: #ff0 !important;
+    text-shadow: none !important;
+}
+
+body.high-contrast .btn,
+body.high-contrast .parrafo{
+    background-color: #000 !important;
+    color: #ff0 !important;
+    border: 2px solid #ff0 !important;
+}
+
+body.daltonismo {
+    filter: grayscale(100%);
+}
+
+:focus-visible {
+    outline: 3px solid #ff0 !important;
+    outline-offset: 2px;
+}
+
+:focus:not(:focus-visible){
+    outline: none;
+}
+
+input:focus, textarea:focus{
+    outline: none !important;
+}

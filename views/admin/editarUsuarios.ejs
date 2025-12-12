@@ -1,0 +1,88 @@
+<%- include('../partials/header', {titulo: 'GreenRide - editarUsuarios' , pagina: 'editarUsuarios'}) %>
+
+<main class="container">
+
+    <div class="cuadrado p-3">
+
+        <h2 class="text-center text-light">Editar Usuario</h2>
+
+        <form id="editarUsuariosForm" class="needs-validation" novalidate>
+            <table class="table table-borderless text-light">
+
+                <tbody>
+
+                    <tr>
+                        <th class="text-start">Seleciona un usuario</th>
+                        <td class="text-start">
+                            <select class="form-select" id="usuario" name="usuario" required >
+                                <option value="">Selecciona un usuario</option>
+                            </select>
+                            <div class="invalid-feedback">Seleccione un usuario</div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th class="text-start">Nombre:</th>
+                        <td class="text-start">
+                            <input type="text" id="nombre" name="nombre" class="form-control"
+                            value="" disabled>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th class="text-start">Correo:</th>
+                        <td class="text-start">
+                            <input type="text" id="correo" name="correo" class="form-control"
+                            value="" disabled>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th class="text-start">Telefono:</th>
+                        <td class="text-start">
+                            <input type="text" id="telefono" name="telefono" class="form-control"
+                            value="" disabled>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th class="text-start">Concesionario:</th>
+                        <td class="text-start">
+                            <select class="form-select" id="concesionario" name="concesionario" required disabled>
+                                <option value="">Selecciona un concesionario</option>
+                            </select>
+                            <div class="invalid-feedback">Seleccione un concesionario</div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th class="text-start">Rol:</th>
+                        <td class="text-start">
+
+                            <select class="form-select" id="rol" name="rol" required disabled>
+                                <option value="">Selecciona un rol</option>
+                                <option value="empleado">empleado</option>
+                                <option value="admin">admin</option>
+                            </select>
+                            <div class="invalid-feedback">Seleccione un rol</div>
+                        
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <button type="submit" id="editar" class="btn btn-primary" disabled>Editar</button>
+            
+        </form>
+
+        
+
+    </div>
+
+
+</main>
+
+
+<%- include('../partials/footer', {pagina: 'editarUsuarios' }) %>

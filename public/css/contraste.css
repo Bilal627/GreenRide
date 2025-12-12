@@ -1,0 +1,131 @@
+/* ===============================
+   Estilo base accesible – Contraste alto
+   =============================== */
+
+/* Cuerpo */
+body {
+    background-color: black;
+    /* Fondo oscuro */
+    color: yellow;
+    /* Texto amarillo legible */
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0 20px;
+}
+
+/* Enlaces */
+a {
+    color: cyan;
+    text-decoration: underline;
+}
+
+a:hover,
+a:focus {
+    color: #00ffff;
+    outline: 2px solid yellow;
+}
+
+/* Botones */
+button {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid yellow;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover,
+button:focus {
+    background-color: gold;
+    outline: 2px solid cyan;
+}
+
+/* Encabezados */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: yellow;
+}
+
+/* Tablas */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table th,
+table td {
+    border: 2px solid yellow;
+    padding: 8px;
+    color: yellow;
+    background-color: black;
+}
+
+table caption {
+    color: yellow;
+    font-weight: bold;
+}
+
+/* Formularios */
+input,
+select,
+textarea {
+    background-color: black;
+    color: yellow;
+    border: 2px solid yellow;
+    padding: 5px;
+    font-size: 16px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid cyan;
+}
+
+/* Listas */
+ul,
+ol,
+dl {
+    color: yellow;
+}
+
+li,
+dt,
+dd {
+    margin: 5px 0;
+}
+
+/* Secciones, divisiones y contenido general */
+section,
+div,
+main {
+    margin-bottom: 20px;
+}
+
+/* Multimedia */
+video,
+audio {
+    border: 2px solid yellow;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    color: yellow;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Opcional: clase de alto contraste extra */
+.contraste-alto {
+    background-color: black !important;
+    color: yellow !important;
+}

@@ -1,0 +1,48 @@
+<%- include('../partials/header', {titulo: 'GreenRide - editarConcesionarios' , pagina: 'editarConcesionarios'}) %>
+
+<main class="container">
+        <div class = "cuadrado">   
+            <form id="editarConcesionariosForm" class="needs-validation" novalidate>
+                <h2 class="text-center text-light mb-4">Editar Concesionario</h2>
+
+                <div class="mb-3">
+                    <label for="concesionario" class="form-label text-light">Concesionario</label>
+                    <select class="form-select" id="concesionario" name="concesionario" required>
+                        <option value="">Selecciona un concesionario</option>
+                    </select>
+                    <div class="invalid-feedback">Seleccione un concesionario</div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="nombre" class="form-label text-light">Nombre completo</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre completo" required disabled>
+                    <div class="invalid-feedback">Introduzca su nombre completo</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="ciudad" class="form-label text-light">Ciudad</label>
+                    <input type="text" class="form-control" id="ciudad" name="ciudad" placeholder="Madrid" required disabled>
+                    <div class="invalid-feedback">Introduzca la ciudad</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="direccion" class="form-label text-light">Direccion</label>
+                    <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Av. Complutense, s/n" required disabled>
+                    <div class="invalid-feedback">Introduzca la direccion</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="telefono" class="form-label text-light">Teléfono</label>
+                    <input type="tel" class="form-control" id="telefono" name="telefono" required disabled>
+                </div>
+
+                <button type="submit" id="editar"  class="btn btn-primary" disabled>Editar</button>
+
+            </form>
+        </div>
+
+    </main>
+
+
+
+<%- include('../partials/footer', {pagina: 'editarConcesionarios' }) %>
