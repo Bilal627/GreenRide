@@ -1,4 +1,4 @@
-# 🚗 GreenRide ERP: Plataforma de Gestión de Flotas Eléctricas
+# 🚗 GreenRide: Plataforma de Gestión de Flotas Eléctricas
 
 ## 🌟 Resumen del Proyecto
 
