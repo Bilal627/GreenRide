@@ -82,7 +82,7 @@ El sistema estará accesible en `http://localhost:3000`.
 
 ---
 
-## 👤 Autor
+## 👤 Autores
 
 * **Bilal El Mourabit El Mourabiti**
 *  **Jiayun Zhan**
